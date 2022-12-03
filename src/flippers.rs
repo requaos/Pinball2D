@@ -32,13 +32,12 @@ fn spawn_flippers(mut commands: Commands) {
             crate::PIXELS_PER_METER * 0.05,
         ),
         origin: lyon::shapes::RectangleOrigin::Center,
-    }
-    .into();
+    };
 
     //Spawn left flipper
     let left_flipper_pos = Vec2::new(
         crate::PIXELS_PER_METER * -0.2,
-        crate::PIXELS_PER_METER * -0.4,
+        crate::PIXELS_PER_METER * -0.8,
     );
 
     commands
@@ -51,6 +50,7 @@ fn spawn_flippers(mut commands: Commands) {
             Transform::default(),
         ))
         .insert(RigidBody::KinematicPositionBased)
+        .insert(Restitution::coefficient(0.7))
         .insert(Collider::cuboid(
             shape_flipper.extents.x / 2.0,
             shape_flipper.extents.y / 2.0,
@@ -72,7 +72,7 @@ fn spawn_flippers(mut commands: Commands) {
     //Spawn right flipper
     let right_flipper_pos = Vec2::new(
         crate::PIXELS_PER_METER * 0.1,
-        crate::PIXELS_PER_METER * -0.4,
+        crate::PIXELS_PER_METER * -0.8,
     );
 
     commands
@@ -85,6 +85,7 @@ fn spawn_flippers(mut commands: Commands) {
             Transform::default(),
         ))
         .insert(RigidBody::KinematicPositionBased)
+        .insert(Restitution::coefficient(0.7))
         .insert(Collider::cuboid(
             shape_flipper.extents.x / 2.0,
             shape_flipper.extents.y / 2.0,

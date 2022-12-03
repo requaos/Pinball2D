@@ -28,7 +28,7 @@ fn spawn_launcher(mut commands: Commands) {
 
     let launcher_pos = Vec2::new(
         crate::PIXELS_PER_METER * 0.3,
-        crate::PIXELS_PER_METER * -0.58,
+        crate::PIXELS_PER_METER * -0.88,
     );
 
     commands
@@ -65,7 +65,7 @@ fn launcher_movement(
         }
         let clamped_ypos = next_ypos.clamp(
             launcher.start_point.y,
-            launcher.start_point.y + crate::PIXELS_PER_METER * 0.05,
+            launcher.start_point.y + crate::PIXELS_PER_METER * 0.10,
         );
         launcher_transform.translation.y = clamped_ypos;
     }

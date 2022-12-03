@@ -25,7 +25,7 @@ fn spawn_walls(mut commands: Commands) {
     };
 
     //Spawn bottom wall
-    let bottom_wall_pos = Vec2::new(0.0, crate::PIXELS_PER_METER * -0.64);
+    let bottom_wall_pos = Vec2::new(0.0, crate::PIXELS_PER_METER * -0.94);
     commands
         .spawn(lyon::GeometryBuilder::build_as(
             &shape_top_and_bottom_wall,
@@ -49,7 +49,7 @@ fn spawn_walls(mut commands: Commands) {
         .insert(BottomWall);
 
     //Spawn top wall
-    let top_wall_pos = Vec2::new(0.0, crate::PIXELS_PER_METER * 0.64);
+    let top_wall_pos = Vec2::new(0.0, crate::PIXELS_PER_METER * 0.94);
     commands
         .spawn(lyon::GeometryBuilder::build_as(
             &shape_top_and_bottom_wall,
@@ -70,7 +70,7 @@ fn spawn_walls(mut commands: Commands) {
     let shape_left_and_right_wall = lyon::shapes::Rectangle {
         extents: Vec2::new(
             crate::PIXELS_PER_METER * 0.03,
-            crate::PIXELS_PER_METER * 1.3,
+            crate::PIXELS_PER_METER * 1.88,
         ),
         origin: lyon::shapes::RectangleOrigin::Center,
     };
@@ -115,14 +115,14 @@ fn spawn_walls(mut commands: Commands) {
     let shape_launcher_wall = lyon::shapes::Rectangle {
         extents: Vec2::new(
             crate::PIXELS_PER_METER * 0.03,
-            crate::PIXELS_PER_METER * 0.5,
+            crate::PIXELS_PER_METER * 0.8,
         ),
         origin: lyon::shapes::RectangleOrigin::Center,
     };
 
     let launcher_wall_pos = Vec2::new(
         crate::PIXELS_PER_METER * 0.25,
-        crate::PIXELS_PER_METER * -0.36,
+        crate::PIXELS_PER_METER * -0.53,
     );
     commands
         .spawn(lyon::GeometryBuilder::build_as(
@@ -158,8 +158,8 @@ fn spawn_walls(mut commands: Commands) {
     };
 
     let upper_right_obstruction_pos = Vec2::new(
-        crate::PIXELS_PER_METER * 0.37,
-        crate::PIXELS_PER_METER * 0.4,
+        crate::PIXELS_PER_METER * 0.35,
+        crate::PIXELS_PER_METER * 0.7,
     );
 
     commands

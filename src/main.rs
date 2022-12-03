@@ -17,7 +17,7 @@ use launcher::*;
 mod pins;
 use pins::*;
 
-pub const PIXELS_PER_METER: f32 = 492.3;
+pub const PIXELS_PER_METER: f32 = 692.3;
 
 fn main() {
     App::new()
@@ -26,8 +26,8 @@ fn main() {
         .add_plugins(DefaultPlugins.set(WindowPlugin {
             window: WindowDescriptor {
                 title: "Pinball2d".to_string(),
-                width: 360.0,
-                height: 640.0,
+                width: 490.0,
+                height: 1324.0,
                 ..Default::default()
             },
             ..Default::default()
